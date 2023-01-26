@@ -1,28 +1,57 @@
 #include <iostream>
 
 using namespace std;
-
-int main (){
-
-
-
-
-
-
-    return 0;
-}
-
-// In this set of exercises you will create a simple program (step by step) for sorting the
-// numbers inputted by the user into a dynamically allocated array of integers. The user will
-// also make the choice concerning the order (ascending or descending) the array should be 
-// sorted with. For dynamically allocated variables remember to free the memory.
-
 // Exercise 1.
 
 // Create a function "createArray" that initializes a dynamically allocated array of integers
 // with the size of the array sent as the argument of the function. The function should return
 // the array it creates so it can be assigned to any dynamically allocated variable in other
 // functions.
+int * creatArray (int *);
+
+int main (){
+
+    cout << "How many elements would you like in your array?" << endl;
+    int amount;
+    cin >> amount;
+    
+    int * s = new int[amount];
+
+
+    creatArray(&amount);
+
+
+
+
+
+    // createArray(&size);
+
+    // delete []size;
+    return 0;
+}
+
+int * creatArray(int * size){
+
+    // cout << *size << endl;
+
+    int arrLength= *size;
+
+    cout << arrLength << endl;
+
+    // for (int i = 0; i < arrLength; i++){
+    //    cout << (arrLength + i) << endl;
+    
+    // }
+    // cout << *(size + 1) << " " << (size + 1) << endl;
+    // cout << *(size + 2) << endl;
+
+    return (size + 1);
+}
+// In this set of exercises you will create a simple program (step by step) for sorting the
+// numbers inputted by the user into a dynamically allocated array of integers. The user will
+// also make the choice concerning the order (ascending or descending) the array should be 
+// sorted with. For dynamically allocated variables remember to free the memory.
+
 
 // Exercise 2.
 
