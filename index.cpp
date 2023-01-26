@@ -14,38 +14,35 @@ int main (){
     cout << "How many elements would you like in your array?" << endl;
     int amount;
     cin >> amount;
+
+    cout << endl << endl << endl;
     
     int * s = new int[amount];
 
-
     creatArray(&amount);
 
+    delete []s;
 
-
-
-
-    // createArray(&size);
-
-    // delete []size;
     return 0;
 }
 
 int * creatArray(int * size){
 
-    // cout << *size << endl;
+    int arrLength = *size;
 
-    int arrLength= *size;
-
-    cout << arrLength << endl;
-
-    // for (int i = 0; i < arrLength; i++){
-    //    cout << (arrLength + i) << endl;
+    for (int i = 0; i < arrLength; i++){
+       cout << (arrLength + i) << endl;
     
-    // }
+    }
+
+    // cout << (arrLength + 0) << endl;
+    // cout << (arrLength + 1) << endl;
     // cout << *(size + 1) << " " << (size + 1) << endl;
     // cout << *(size + 2) << endl;
 
-    return (size + 1);
+    int &arrSize = arrLength;
+
+    return &arrSize + 0;
 }
 // In this set of exercises you will create a simple program (step by step) for sorting the
 // numbers inputted by the user into a dynamically allocated array of integers. The user will
